@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Mission to Mars</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  </head>
+
+  <body>
+    <div class="container-fluid">
+      <div class="jumbotron text-center">
+        <h1>Mission to Mars!</h1>
+        <p>The mission of this project was to build a web application that scrapes through different websites
+          and
+          obtaining data. The data is then pulled in
+          to the project was pulled and displayed into a single HTML page. </p>
+        </p>
+        <p><a class="btn btn-primary btn-lg" href="/scrape" role="button">Get Data!</a></p>
+      </div>
+    </div>
+    <!--News section-->
+    <div class="container">
+      <div class="row" id="Mission_to_Mars">
+        <div class="col-md-12">
+          <h1>NASA Mars News</h1>
+          <h3>Catch all the latest news on Mars!</h3>
+          <h6 class="heading">{{mars.title}} </h6>
+          <h6>{{mars.thread}}</h6>
+        </div>
+      </div>
+    </div>
+    <!--Featured Image-->
+    <div class="container">
+      <div class="row" id="Mission_to_Mars">
+        <div class="col-md-12">
+          <h1>JPL Mars Space Images - Featured Image</h1>
+          <h3>The latest featured image!</h3>
+          <img src="{{mars.featured_image_url}}" alt="Responsive Image">
+        </div>
+      </div>
+    </div>
+    <!--Twitter Weather-->
+    <div class="container">
+      <div class="row" id="Mission_to_Mars">
+        <div class="col-md-12">
+          <h1>Weather on Mars</h1>
+          <h3>Current weather for Mars.</h3>
+          <h6 class="Heading">{mars.mars_weather}}</h6>
+        </div>
+      </div>
+    </div>
+    <!--Mars Facts-->
+    <div class="container">
+      <div class="row" id="Mission_to_Mars">
+        <div class="col-md-12">
+          <h1>Mars Facts</h1>
+          <h3>Everything you have ever wanted to know about Mars.</h3>
+          {{mars.mars_facts}}
+        </div>
+      </div>
+    </div>
+    <!--Mars Hemispheres-->
+    <div class="container">
+      <div class="row" id="Mission_to_Mars">
+        <div class="col-md-12">
+          <h1>Mars Hemispheres</h1>
+          <h3>{{mars.mars_hemispheres|safe}}</h3>
+        </div>
+      </div>
+    </div>
+  </body>
+
+</html>
